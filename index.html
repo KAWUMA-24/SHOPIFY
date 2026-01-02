@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPIFY </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+             <h1> SHOPIFY <span class="beta-badge">-ONLINE STOP SHOP</span></h1>
+            
+            <div class="controls">
+                <div class="view-toggle">
+                    <button class="active" id="grid-view"><i class="fas fa-th"></i> Grid</button>
+                    <button id="list-view"><i class="fas fa-list"></i> List</button>
+                    <button id="compact-view"><i class="fas fa-grip-vertical"></i> Compact</button>
+                </div>
+                <div class="filter-sort">
+                    <select id="category-filter">
+                        <option value="">All Categories</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Home">Home</option>
+                        <option value="Beauty">Beauty</option>
+                        <option value="Sports">Sports</option>
+                    </select>
+                    <select id="sort-by">
+                        <option value="default">Sort by</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                        <option value="name">Name</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+                    <div class="price-filter">
+                        <input type="range" id="price-range" min="0" max="200" value="200" class="price-slider">
+                        <span class="price-range-label">Up to $<span id="price-max">200</span></span>
+                    </div>
+                    <input type="text" id="search" class="search-input" placeholder="Search products...">
+                    <button id="advanced-filter-btn" class="btn-icon" title="Advanced Filters">
+                        <i class="fas fa-filter"></i>
+                    </button>
+                </div>
+            </div>
+
+            
+
+       
+        </header>
+
+        <div id="products-container" class="products-grid">
+            </div>
+
+        <button id="wishlist-indicator" class="floating-btn" title="View Wishlist">
+            <i class="fas fa-heart"></i>
+            <span class="wishlist-count" id="wishlist-count">0</span>
+        </button>
+
+        <button id="cart-indicator" class="floating-btn" title="View Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span>
+        </button>
+
+        <button id="theme-toggle" class="floating-btn" title="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        
+
+        <div class="toast-container" id="toast-container"></div>
+    </div>
+
+
+    
+    <script src="./script.js"></script>
+</body>
+
+</html>
